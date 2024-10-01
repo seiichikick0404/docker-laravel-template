@@ -22,6 +22,11 @@ services:
       - DB_DATABASE=${DB_DATABASE:-laravel}
       - DB_USERNAME=${DB_USERNAME:-phper}
       - DB_PASSWORD=${DB_PASSWORD:-secret}
+    ports:
+      - target: 5173
+        published: ${APP_PUBLISHED_PORT:-5173}
+        protocol: tcp
+        mode: host
 
   web:
     build:

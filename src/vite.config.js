@@ -6,9 +6,16 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/css/app.css',
-                'resources/js/app.js'
+                'resources/js/app.js',
+                'resources/js/sample.js',
             ],
             refresh: true,
         }),
     ],
+    server: {
+        host: true,
+        hmr: {
+            host: 'localhost',
+        },
+    },
 });
